@@ -41,3 +41,6 @@
 	safecrlf = true
 [push]
 	default = matching
+[user]
+	email = parsons.eric@gmail.com
+	name = Eric Parsons
