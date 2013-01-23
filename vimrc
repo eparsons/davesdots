@@ -394,8 +394,10 @@ set t_RV=
 
 
 " Highlight the 81st column
-set cc=81
-highlight colorColumn ctermbg=darkblue
+if exists('+colorcolumn')
+   set colorcolumn=81
+   highlight colorColumn ctermbg=darkblue
+endif
 
 " Highlight characters beyond the 80th column.
 highlight OverLength ctermbg=darkblue ctermfg=white guibg=#592929
