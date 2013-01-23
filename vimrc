@@ -50,6 +50,7 @@ set number
 
 set diffopt+=iwhite
 
+
 " ---- Filetypes ----
 if has('syntax')
    syntax on
@@ -380,7 +381,7 @@ if v:version >= 700
 
    let OmniCpp_MayCompleteDot = 1 " autocomplete with .
    let OmniCpp_MayCompleteArrow = 1 " autocomplete with ->
-   let OmniCpp_MayCompleteScope = 1 " autocomplete with ::
+   let OmniCpp_MayCompleteScope = 0 " autocomplete with ::
    let OmniCpp_SelectFirstItem = 2 " select first item (but don't insert)
    let OmniCpp_NamespaceSearch = 2 " search namespaces in this and included files
    let OmniCpp_ShowPrototypeInAbbr = 1 " show function prototype (i.e. parameters) in popup window
@@ -390,3 +391,12 @@ if v:version >= 700
 endif
 
 set t_RV=
+
+
+" Highlight the 81st column
+set cc=81
+highlight colorColumn ctermbg=darkblue
+
+" Highlight characters beyond the 80th column.
+highlight OverLength ctermbg=darkblue ctermfg=white guibg=#592929
+match OverLength /\%>80v.\+/
