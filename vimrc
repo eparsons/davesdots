@@ -392,6 +392,8 @@ endif
 
 set t_RV=
 
+" Allow saving of files as sudo when I forgot to start vim using sudo.
+cmap w!! %!sudo tee > /dev/null %
 
 " Highlight the 81st column
 if exists('+colorcolumn')

@@ -35,6 +35,10 @@
 	diff = auto
 	status = auto
 	branch = auto
+[color "status"]
+	added = green bold
+	untracked = yellow bold
+	changed = magenta bold
 [core]
 	pager =
 	excludesfile = ~/.gitignore
